@@ -156,7 +156,6 @@ textarea {
 }
 .app {
     position: absolute;
-    padding: 20px;
     z-index: 2;
 }
 .app > .app-text {

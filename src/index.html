@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Desktop Simulator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,47 +19,75 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-            <div id="drag-area">
-
-                <div class="window window-test">
-                    <div class="window-right-click-menu">
-
-                    </div><!--window-right-click-menu-->
-                    <div class="window-frame">
-                        <div class="window-handle">
-                            <div class="close-button" onclick="closeApp('test')">x</div>
-                        </div>
-
-                        <div class="window-contents">
-
-                        </div><!--window-contents-->
-                    </div><!--window-frame-->
-                </div><!--window-test-->
-
-                <div class="app app-test" ondblclick="openApp('test')">
-                    <div class="app-right-click-menu">
-
-                    </div><!--app-right-click-menu-->
-                    <div class="icon">
-                        <img src="img/gw2.png" alt=" " />
-                    </div><!--icon-->
-                    <div class="app-text">
-                        test
-                    </div><!--app-text-->
-                </div><!--app-test-->
-
-                <div id="desktop-right-click-menu">
-
-                </div><!--desktop-right-click-menu-->
-
-            </div><!--drag-area-->
 
 
-            <div id="home-menu">
-                <div id="home-right-click-menu">
+        <div id="home-menu">
+            <div id="home-right-click-menu">
 
-                </div><!--desktop-right-click-menu-->
-            </div><!--home-menu-->
+            </div><!--desktop-right-click-menu-->
+        </div><!--home-menu-->
+
+
+        <div id="drag-area">
+
+            <div class="window window-test">
+                <div class="window-right-click-menu">
+
+                </div><!--window-right-click-menu-->
+                <div class="window-frame">
+                    <div class="window-handle">
+                        <div class="close-button" onclick="closeApp('test')">x</div>
+                    </div>
+
+                    <div class="window-contents">
+
+                    </div><!--window-contents-->
+                </div><!--window-frame-->
+            </div><!--window-test-->
+
+            <div class="window window-test2">
+                <div class="window-right-click-menu">
+
+                </div><!--window-right-click-menu-->
+                <div class="window-frame">
+                    <div class="window-handle">
+                        <div class="close-button" onclick="closeApp('test2')">x</div>
+                    </div>
+
+                    <div class="window-contents">
+
+                    </div><!--window-contents-->
+                </div><!--window-frame-->
+            </div><!--window-test2-->
+
+            <div class="app app-test" ondblclick="openApp('test')">
+                <div class="app-right-click-menu">
+
+                </div><!--app-right-click-menu-->
+                <div class="icon">
+                    <img src="img/gw2.png" alt=" " />
+                </div><!--icon-->
+                <div class="app-text">
+                    test
+                </div><!--app-text-->
+            </div><!--app-test-->
+            <div class="app app-test2" ondblclick="openApp('test2')">
+                <div class="app-right-click-menu">
+
+                </div><!--app-right-click-menu-->
+                <div class="icon">
+                    <img src="img/gw2.png" alt=" " />
+                </div><!--icon-->
+                <div class="app-text">
+                    test2
+                </div><!--app-text-->
+            </div><!--app-test2-->
+
+            <div id="desktop-right-click-menu">
+
+            </div><!--desktop-right-click-menu-->
+
+        </div><!--drag-area-->
 
         <script src="js/vendor/jquery-2.1.4.min.js"></script>
         <script src="js/vendor/jquery-ui.min.js"></script>
