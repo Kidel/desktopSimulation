@@ -23,7 +23,14 @@ html {
  */
 
 ::selection {
-    background: #b3d4fc;
+    background: #1c1e1b;
+    background: rgba(0,0,0,0);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #1c1e1b;
+    background: rgba(0,0,0,0);
     text-shadow: none;
 }
 
@@ -105,14 +112,47 @@ textarea {
 }
 .window {
     position: absolute;
-    padding: 20px;
-    z-index: 100;
-    background-color: #1b6d85;
-    min-height: 100px;
-    min-width: 100px;
+    padding: 0px;
     display: none;
     left: 40%;
-    top: 30%;
+    top: 20%;
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.8);
+    z-index: 100;
+}
+.window > .window-frame {
+    padding: 5px;
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ddd;
+    /*box-shadow: inset 0px 0px 9px 0px rgba(0,0,0,0.8);*/
+}
+.window > .window-frame > .window-handle {
+    height: 30px;
+    padding: 0px;
+}
+.window > .window-frame > .window-handle > .close-button {
+    display: inline;
+    text-align: center;
+    float: right;
+    width: 31px;
+    height: 20px;
+    background-color: #b92c28;
+    color: white;
+    cursor: default;
+}
+.window > .window-frame > .window-handle > .close-button:hover {
+    background-color: #d62d29;
+}
+
+.window > .window-frame > .window-contents{
+    padding: 10px;
+    height: 500px;
+    min-height: 100px;
+    width: 600px;
+    min-width: 100px;
+    background-color: #fff;
+    /*box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.8);*/
 }
 .app {
     position: absolute;

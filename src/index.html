@@ -15,20 +15,31 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body id="desktop">
-        <!--[if lt IE 8]>
+        <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
             <div id="drag-area">
 
                 <div class="window window-test">
+                    <div class="window-right-click-menu">
 
+                    </div><!--window-right-click-menu-->
+                    <div class="window-frame">
+                        <div class="window-handle">
+                            <div class="close-button" onclick="closeApp('test')">x</div>
+                        </div>
+
+                        <div class="window-contents">
+
+                        </div><!--window-contents-->
+                    </div><!--window-frame-->
                 </div><!--window-test-->
 
                 <div class="app app-test" ondblclick="openApp('test')">
                     <div class="app-right-click-menu">
 
-                    </div><!--desktop-right-click-menu-->
+                    </div><!--app-right-click-menu-->
                     <div class="icon">
                         <img src="img/gw2.png" alt=" " />
                     </div><!--icon-->
