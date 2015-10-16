@@ -159,6 +159,7 @@ textarea {
 .app {
     position: absolute;
     z-index: 2;
+    border: 1px solid rgba(97, 140, 187, 0);
 }
 .app-selected {
     background-color: rgba(97, 140, 187, 0.50);

@@ -77,7 +77,7 @@ $(document).ready(function(){
 });
 
 function get_max_z(target_class){
-    var max = (target_class=="window")? 100 : 0;
+    var max = (target_class=="window")? 100 : 2;
     $("."+target_class).each(function() {
         var index_current = parseInt($(this).css("z-index"), 10);
         if (index_current > max) {
