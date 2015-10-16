@@ -66,6 +66,8 @@ $(document).ready(function(){
             alert('Right mouse button on app');
             return false;
         }
+        //TODO this will open the menu for the app (with 'open' option)
+        $(this).on( "taphold", function(event){ var a=$(this).attr("onclick").split("('"); open_app(a[1].split("')")[0]); });
         return true;
     });
     $("#desktop").mousedown(function(e){
