@@ -160,9 +160,17 @@ textarea {
     z-index: 2;
     border: 1px solid rgba(97, 140, 187, 0);
 }
+.app:hover {
+    background-color: rgba(97, 140, 187, 0.4);
+    border: 1px solid rgba(97, 140, 187, 0.6);
+}
 .app-selected {
     background-color: rgba(97, 140, 187, 0.50);
     border: 1px solid rgba(97, 140, 187, 0.80);
+}
+.app-selected:hover {
+    background-color: rgba(97, 140, 187, 0.6);
+    border: 1px solid rgba(97, 140, 187, 0.85);
 }
 .app > .app-text {
     text-align: center;

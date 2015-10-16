@@ -73,6 +73,9 @@ $(document).ready(function(){
             alert('Right mouse button on desktop');
             return false;
         }
+        $(".app").each(function(){
+            $(this).removeClass('app-selected');
+        });
         return true;
     });
 });
@@ -92,7 +95,9 @@ function open_app(app_name) {
     $(".window").each(function(){
         $(this).removeClass('window-selected');
     });
-    $(".app-" + app_name).removeClass('app-selected');
+    $(".app").each(function(){
+        $(this).removeClass('app-selected');
+    });
     $(".window-" + app_name).css("z-index", (get_max_z("window")+1)).addClass('window-selected').show();
 }
 function close_app(app_name) {
@@ -104,6 +109,9 @@ function select_app(app_name) {
     });
     $(".app-" + app_name).addClass('app-selected').css("z-index", (get_max_z("app")+1));
 }
+
+
+
 
 // TODO
 // menus and different app contents

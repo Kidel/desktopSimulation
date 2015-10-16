@@ -21,4 +21,20 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+/*
+
+ // doubletap on mobile devices. Use onclick="tap(tapOnceFunc, arg, tapTwiceFunc, arg)"
+ var doubletapTimer = null;
+ function tap(singleTapFunc, arg1, doubleTapFunc, arg2) {
+ if (doubletapTimer==null) {
+ // First tap, we wait X ms to the second tap
+ doubletapTimer = setTimeout(function(){ singleTapFunc(arg1); doubletapTimer = null; }, 200);
+ } else {
+ // Second tap
+ clearTimeout(doubletapTimer);
+ doubletapTimer = null;
+ doubleTapFunc(arg2);
+ }
+ }
+
+* */
