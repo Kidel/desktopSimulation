@@ -1,3 +1,7 @@
+apps.forEach(function(entry) {
+    $("#drag-area").append(entry);
+});
+
 $(function() {
     $(".app").draggable({ containment: "#drag-area" });
     $(".window").draggable({ containment: "#drag-area", handle: ".window-handle" });
@@ -5,28 +9,38 @@ $(function() {
 
 //window position init
 $(".window").each(function() {
+    var max_h = parseInt($("#desktop").css("height"), 10);
+    var offset = parseInt($(this).css("height"), 10)+10;
     var top = parseInt(parseInt($("#desktop").css("height"), 10)/2-300);
     var left = parseInt(parseInt($("#desktop").css("width"), 10)/2-400);
     $(".window").each(function() {
         $(this).css("top", top);
         $(this).css("left", left);
-        top += 20;
-        left += 20;
+        top += 20+Math.floor((Math.random() * 10) + 1);
+        left += 20+Math.floor((Math.random() * 10) + 1);
+
+        if(top+offset>max_h){
+            left = 140+Math.floor((Math.random() * 10) + 1);
+            top = 30+Math.floor((Math.random() * 10) + 1);
+        }
     });
 });
 
 //app position init
 $(".app").each(function() {
-    var maxH = parseInt($("#desktop").css("height"), 10);
+    var max_h = parseInt($("#desktop").css("height"), 10);
+    var offset = parseInt($(this).css("height"), 10)+20;
     var top = 20
     var left = 20;
     $(".app").each(function() {
         $(this).css("top", top);
         $(this).css("left", left);
-        top += 85;
+        top += 90;
 
-        if(top+85>maxH)
-            left += 95;
+        if(top+offset>max_h){
+            left += 85;
+            top = 20
+        }
     });
 });
 
@@ -62,27 +76,33 @@ $(document).ready(function(){
     });
 });
 
-function get_max_z(){
+function get_max_z(target_class){
     var max = 0;
-    $(".window").each(function() {
+    $("."+target_class).each(function() {
         var index_current = parseInt($(this).css("zIndex"), 10);
         if (index_current > max) {
             max = index_current;
         }
     });
     return max;
-    //console.log(max);
 }
 
-function openApp(appName) {
-    $(".window-" + appName).css("z-index", (get_max_z()+1));
-    $(".window-" + appName).show();
+function open_app(app_name) {
+    $(".window").each(function(){
+        $(this).removeClass('window-selected');
+    });
+    $(".app-" + app_name).removeClass('app-selected');
+    $(".window-" + app_name).css("z-index", (get_max_z("window")+1)).addClass('window-selected').show();
 }
-
-function closeApp(appName) {
-    $(".window-" + appName).hide();
+function close_app(app_name) {
+    $(".window-" + app_name).hide();
 }
-
+function select_app(app_name) {
+    $(".app").each(function(){
+        $(this).removeClass('app-selected');
+    });
+    $(".app-" + app_name).addClass('app-selected').css("z-index", (get_max_z("app")+1));
+}
 
 // TODO
-// color app icon when single clicked, remove color when double clicked or when another app is selected
+// menus and different app contents

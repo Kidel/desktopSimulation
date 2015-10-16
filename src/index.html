@@ -13,6 +13,8 @@
         <link href="css/normalize.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/init.js"></script>
     </head>
     <body id="desktop">
         <!--[if lte IE 9]>
@@ -30,58 +32,10 @@
 
         <div id="drag-area">
 
-            <div class="window window-test">
-                <div class="window-right-click-menu">
-
-                </div><!--window-right-click-menu-->
-                <div class="window-frame">
-                    <div class="window-handle">
-                        <div class="close-button" onclick="closeApp('test')">x</div>
-                    </div>
-
-                    <div class="window-contents">
-
-                    </div><!--window-contents-->
-                </div><!--window-frame-->
-            </div><!--window-test-->
-
-            <div class="window window-test2">
-                <div class="window-right-click-menu">
-
-                </div><!--window-right-click-menu-->
-                <div class="window-frame">
-                    <div class="window-handle">
-                        <div class="close-button" onclick="closeApp('test2')">x</div>
-                    </div>
-
-                    <div class="window-contents">
-
-                    </div><!--window-contents-->
-                </div><!--window-frame-->
-            </div><!--window-test2-->
-
-            <div class="app app-test" ondblclick="openApp('test')">
-                <div class="app-right-click-menu">
-
-                </div><!--app-right-click-menu-->
-                <div class="icon">
-                    <img src="img/gw2.png" alt=" " />
-                </div><!--icon-->
-                <div class="app-text">
-                    test
-                </div><!--app-text-->
-            </div><!--app-test-->
-            <div class="app app-test2" ondblclick="openApp('test2')">
-                <div class="app-right-click-menu">
-
-                </div><!--app-right-click-menu-->
-                <div class="icon">
-                    <img src="img/gw2.png" alt=" " />
-                </div><!--icon-->
-                <div class="app-text">
-                    test2
-                </div><!--app-text-->
-            </div><!--app-test2-->
+            <script>
+                for(var i=1; i<=20; i++)
+                    add_app({name: "test"+i, icon:"icon.png", contents:""});
+            </script>
 
             <div id="desktop-right-click-menu">
 

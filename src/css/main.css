@@ -127,11 +127,14 @@ textarea {
     background-color: #ddd;
     /*box-shadow: inset 0px 0px 9px 0px rgba(0,0,0,0.8);*/
 }
+.window-selected > .window-frame {
+    background-color: #e5e8f9;
+}
 .window > .window-frame > .window-handle {
     height: 30px;
     padding: 0px;
 }
-.window > .window-frame > .window-handle > .close-button {
+.window > .window-frame > .close-button {
     display: inline;
     text-align: center;
     float: right;
@@ -140,11 +143,11 @@ textarea {
     background-color: #b92c28;
     color: white;
     cursor: default;
+    margin-top: -30px;
 }
-.window > .window-frame > .window-handle > .close-button:hover {
+.window > .window-frame > .close-button:hover {
     background-color: #d62d29;
 }
-
 .window > .window-frame > .window-contents{
     padding: 10px;
     height: 500px;
@@ -154,14 +157,19 @@ textarea {
     background-color: #fff;
     /*box-shadow: inset 2px 2px 3px 0px rgba(0,0,0,0.8);*/
 }
+
 .app {
     position: absolute;
     z-index: 2;
+}
+.app-selected {
+    background-color: rgba(147, 182, 231, 0.46);
 }
 .app > .app-text {
     text-align: center;
     color: white;
     text-shadow: 0px 0px 3px #080808;
+    cursor: default;
 }
 .app > .icon > img {
     height: 48px;
