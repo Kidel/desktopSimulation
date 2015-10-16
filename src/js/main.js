@@ -5,6 +5,7 @@ apps.forEach(function(entry) {
 $(function() {
     $(".app").draggable({ containment: "#drag-area" });
     $(".window").draggable({ containment: "#drag-area", handle: ".window-handle" });
+    $(".window-contents").resizable();
 });
 
 //window position init
