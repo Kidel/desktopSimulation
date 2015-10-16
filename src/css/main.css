@@ -25,13 +25,11 @@ html {
 ::selection {
     background: #1c1e1b;
     background: rgba(0,0,0,0);
-    text-shadow: none;
 }
 
 ::-moz-selection {
     background: #1c1e1b;
     background: rgba(0,0,0,0);
-    text-shadow: none;
 }
 
 /*
@@ -117,7 +115,7 @@ textarea {
     left: 40%;
     top: 20%;
     box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.8);
-    z-index: 100;
+    z-index: 500;
 }
 .window > .window-frame {
     padding: 5px;
@@ -163,7 +161,8 @@ textarea {
     z-index: 2;
 }
 .app-selected {
-    background-color: rgba(97, 140, 187, 0.57);
+    background-color: rgba(97, 140, 187, 0.50);
+    border: 1px solid rgba(97, 140, 187, 0.80);
 }
 .app > .app-text {
     text-align: center;
