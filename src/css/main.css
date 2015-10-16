@@ -163,7 +163,7 @@ textarea {
     z-index: 2;
 }
 .app-selected {
-    background-color: rgba(147, 182, 231, 0.46);
+    background-color: rgba(97, 140, 187, 0.57);
 }
 .app > .app-text {
     text-align: center;
