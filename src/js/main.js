@@ -67,6 +67,7 @@ $(document).ready(function(){
             return false;
         }
         //TODO this will open the menu for the app (with 'open' option)
+        //TODO disable  taphold if device is desktop
         $(this).on( "taphold", function(event){ var a=$(this).attr("onclick").split("('"); open_app(a[1].split("')")[0]); });
         return true;
     });
